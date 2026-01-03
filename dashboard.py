@@ -22,14 +22,13 @@ st.markdown("""
     width: 270px !important;
 }
 
-/* 2. Tombol Tutup Sidebar agar terlihat */
 [data-testid="stSidebar"] [data-testid="stBaseButton-headerNoPadding"] {
     color: white !important;
 }
 
 /* 3. Menghilangkan spasi antar elemen default Streamlit */
 [data-testid="stSidebar"] .stElementContainer {
-    margin-bottom: -15px !important; /* Menarik menu agar lebih rapat */
+    margin-bottom: -15px !important; 
 }
 
 /* 4. Styling Dasar Tombol Menu */
@@ -39,9 +38,9 @@ st.markdown("""
     border: none;
     width: 100%;
     text-align: left;
-    padding: 8px 15px !important; /* Padding lebih kecil agar rapat */
+    padding: 8px 15px !important; 
     font-size: 15px;
-    font-weight: 800 !important; /* Sangat Tebal (Bold) */
+    font-weight: 800 !important; 
     border-radius: 8px;
     display: flex;
     justify-content: flex-start;
@@ -54,24 +53,23 @@ st.markdown("""
     color: white;
 }
 
-/* 6. Efek AKTIF (Kotak Putih, Teks Orange) */
-/* Kita targetkan div pembungkus yang kita buat di Python */
+/* 6. Efek AKTIF 
 div[data-active="true"] button {
-    background-color: white !important; /* Background kotak putih */
-    color: #ff8c00 !important; /* Warna font orange saat ditekan */
+    background-color: white !important; 
+    color: #ff8c00 !important; 
     border: none !important;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
 }
 
-/* 7. Profile Box dengan Jarak ke Bawah */
+/* 7. Profile Box 
 .profile-box {
     text-align: center;
     padding: 10px 0;
-    margin-bottom: 30px; /* Ditambah agar menu (Dashboard dll) lebih turun ke bawah */
+    margin-bottom: 30px;
 }
 .profile-box img {
     border-radius: 50%;
-    width: 80px; /* Ukuran sedikit diperbesar agar proporsional */
+    width: 80px; 
     border: 2px solid rgba(255,255,255,0.2);
 }
 .profile-box h4 { color: white; font-size: 16px; margin-top: 10px; font-weight: bold; }
@@ -79,9 +77,9 @@ div[data-active="true"] button {
 
 /* 8. Mengatur Garis Tipis (HR) */
 hr {
-    margin: 10px 0px 25px 0px !important; /* Jarak atas (10px) dan bawah (25px) */
+    margin: 10px 0px 25px 0px !important; 
     border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important; /* Garis sangat tipis & transparan */
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important; 
 }
 
 /* Penyesuaian jarak antar tombol agar lebih rapat lagi */
@@ -104,21 +102,19 @@ hr {
 }
 
 .main-title {
-    margin-top: -80px !important; /* Gunakan !important agar pasti naik */
+    margin-top: -80px !important; 
 }
 
-/* Kotak Chart agar pas */
 .chart-card {
     background-color: #ffffff;
-    padding: 10px; /* Perkecil padding agar chart lebih luas di dalam */
+    padding: 10px; 
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border: 1px solid #e2e8f0;
     margin-bottom: 20px;
-    overflow: hidden; /* Memastikan chart tidak keluar garis */
+    overflow: hidden; 
 }
 
-/* Selektor yang lebih stabil untuk kotak chart */
 div[data-testid="stVerticalBlock"] > div[style*="border"] {
     background-color: white !important;
     border-radius: 15px !important;
@@ -216,7 +212,8 @@ def get_base64_of_bin_file(bin_file):
     return base64.b64encode(data).decode()
 
 if st.session_state.page == "Dashboard":
-    img_base64 = get_base64_of_bin_file(r"D:\mini project\logo bpsdm jatim.png")
+    img_base64 = get_base64_of_bin_file("assets/logo_bpsdm_jatim.png")
+
     
     st.markdown(
         f"""
@@ -303,7 +300,8 @@ if st.session_state.page == "Dashboard":
 # HALAMAN DATA TRANSAKSI
 elif st.session_state.page == "Data Transaksi":
 
-    img_base64 = get_base64_of_bin_file(r"D:\mini project\logo bpsdm jatim.png")
+    img_base64 = get_base64_of_bin_file("assets/logo_bpsdm_jatim.png")
+
     
     st.markdown(
         f"""
@@ -344,7 +342,7 @@ elif st.session_state.page == "Data Transaksi":
 
 # HALAMAN SCAN KWITANSI
 elif st.session_state.page == "Scan Kwitansi":
-    img_base64 = get_base64_of_bin_file(r"D:\mini project\logo bpsdm jatim.png")
+    img_base64 = get_base64_of_bin_file("assets/logo_bpsdm_jatim.png")
     
     st.markdown(
         f"""
@@ -422,7 +420,7 @@ elif st.session_state.page == "Scan Kwitansi":
 # HALAMAN PROFILE
 
 elif st.session_state.page == "Profile":
-    img_base64 = get_base64_of_bin_file(r"D:\mini project\logo bpsdm jatim.png")
+    img_base64 = get_base64_of_bin_file("assets/logo_bpsdm_jatim.png")
     
     st.markdown(
         f"""
