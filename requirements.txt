@@ -1,4 +1,6 @@
-streamlit
+streamlit>=1.25
 pandas
-matplotlib
 numpy
+matplotlib
+plotly
+streamlit-option-menu
